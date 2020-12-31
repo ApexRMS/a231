@@ -23,10 +23,9 @@ options(stringsAsFactors=FALSE)
 
 # Directories
 gisBase <- "C:/Program Files/GRASS GIS 7.4.3"
-projectDir <- "G:/A231 Corridors"
-dataDir <- paste0(projectDir, "/Data")
-resultsDir <- paste0(projectDir, "/Results")
-gisDbase <- paste0(resultsDir, "/grass7")
+dataDir <- "Data"
+resultsDir <- "Data" # Same as data directory
+gisDbase <- "Results/grass7"
 
 # Input parameters
 waterThreshold <- 50 # Minimum percentage of the protected area that must fall in water for the area to be considered "aquatic" (and therefore removed from consideration)

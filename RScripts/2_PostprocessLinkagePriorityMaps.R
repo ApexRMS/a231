@@ -1,3 +1,16 @@
+#### a231: QC connectivity analysis
+#### Script by Bronwyn Rayfield
+
+#### 2. Post-process Linkage Priority Maps
+
+#######################################################################################
+# This code:                                                                          #
+# - Clips each species linkage priority map to the BTSL and rescales it 0 - 1         #
+# - Produces a summary linkage priority map for BTSL + buffer                         #
+# - Produces a summary linkage priority map for BTSL alone                            #
+#######################################################################################
+
+# Workspace
 library(raster)
 
 # Directories
