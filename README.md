@@ -1,0 +1,2 @@
+# Corridors-Basses-terres-du-Saint-Laurent
+Scripts associated with the project "Scénarios de corridors écologiques dans les Basses-terres du Saint-Laurent" financed by the Ministère de l'Environnement et de la Lutte contre les changements climatiques. ~ Scripts associés au projet "Scénarios de corridors écologiques dans les Basses-terres du Saint-Laurent" financé par le Ministère de l'Environnement et de la Lutte contre les changements climatiques.
