@@ -18,7 +18,7 @@ dataDir <- "Data"
 resultDir <- "Results"
 
 # List of species to process
-speciesList <- c("BLBR", "PLCI", "MAAM", "RANA", "URAM")
+speciesList <- c("BLBR", "PLCI", "MAAM", "RASY", "URAM")
 
 # BTSL study area delimitation from Phase II
 btsl<-raster(file.path(dataDir, "studyArea_30m.tif"))
@@ -44,16 +44,16 @@ for(spp in speciesList){
 BLBR <- raster(file.path(resultDir, "LinkagePriority_Buffer", "BLBR_linkage_priority1.tif"))
 PLCI <- raster(file.path(resultDir, "LinkagePriority_Buffer", "PLCI_linkage_priority1.tif"))
 MAAM <- raster(file.path(resultDir, "LinkagePriority_Buffer", "MAAM_linkage_priority1.tif"))
-RANA <- raster(file.path(resultDir, "LinkagePriority_Buffer", "RANA_linkage_priority1.tif"))
+RASY <- raster(file.path(resultDir, "LinkagePriority_Buffer", "RASY_linkage_priority1.tif"))
 URAM <- raster(file.path(resultDir, "LinkagePriority_Buffer", "URAM_linkage_priority1.tif"))
 # Recode NA to 0 before summing
 BLBR[Which(is.na(BLBR))]<-0
 PLCI[Which(is.na(PLCI))]<-0
 MAAM[Which(is.na(MAAM))]<-0
-RANA[Which(is.na(RANA))]<-0
+RASY[Which(is.na(RASY))]<-0
 URAM[Which(is.na(URAM))]<-0
 # Sum all species maps
-all <- BLBR + PLCI + RANA + MAAM + URAM
+all <- BLBR + PLCI + RASY + MAAM + URAM
 # Write raster
 writeRaster(all, file.path(resultDir, "LinkagePriority_Buffer", "ALL_linkage_priority1.tif"), overwrite=TRUE)
 
@@ -82,16 +82,16 @@ quantile(allNA, probs = c(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1))
 BLBR <- raster(file.path(resultDir, "BLBR_btsl01_linkage_priority1.tif"))
 PLCI <- raster(file.path(resultDir, "PLCI_btsl01_linkage_priority1.tif"))
 MAAM <- raster(file.path(resultDir, "MAAM_btsl01_linkage_priority1.tif"))
-RANA <- raster(file.path(resultDir, "RANA_btsl01_linkage_priority1.tif"))
+RASY <- raster(file.path(resultDir, "RASY_btsl01_linkage_priority1.tif"))
 URAM <- raster(file.path(resultDir, "URAM_btsl01_linkage_priority1.tif"))
 # Recode NA to 0
 BLBR[Which(is.na(BLBR))]<-0
 PLCI[Which(is.na(PLCI))]<-0
 MAAM[Which(is.na(MAAM))]<-0
-RANA[Which(is.na(RANA))]<-0
+RASY[Which(is.na(RASY))]<-0
 URAM[Which(is.na(URAM))]<-0
 # Sum all species maps
-all_btsl01 <- BLBR + PLCI + RANA + MAAM + URAM
+all_btsl01 <- BLBR + PLCI + RASY + MAAM + URAM
 # Write raster
 writeRaster(all_btsl01, file.path(resultDir, "ALL_btsl01_linkage_priority1.tif"), overwrite=TRUE)
 
